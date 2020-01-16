@@ -10,6 +10,10 @@ package recursion;
 public class FibonacciTermCalculator {
     public int nTHTermCalculator(int k){
         int response=0;
+        if(k==0||k==1){
+            return k;
+        }
+        response=nTHTermCalculator ( k-1 )+nTHTermCalculator ( k-2 );
         return response;
     }
 }
